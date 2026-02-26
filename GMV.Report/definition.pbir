@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
+  "version": "4.0",
+  "datasetReference": {
+    "byConnection": {
+      "connectionString": "Data Source=\"powerbi://api.powerbi.com/v1.0/myorg/Dashboard POC\";initial catalog=gold-order-items;integrated security=ClaimsToken;semanticmodelid=f696a3cd-356a-4409-8260-0a28b838f6b5"
+    }
+  }
+}
