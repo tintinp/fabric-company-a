@@ -1,0 +1,359 @@
+table fact_order_item
+	lineageTag: 8358cd9a-3580-4d59-a6b0-4bf445f7f102
+	sourceLineageTag: [dbo].[fact_order_item]
+
+	column order_item_sk
+		dataType: string
+		lineageTag: 4cd90053-06d7-4e7c-830a-bd7690582b33
+		sourceLineageTag: order_item_sk
+		summarizeBy: none
+		sourceColumn: order_item_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f837dc3-2315-4d97-bec8-f42fa2c8ed96
+		sourceLineageTag: campaign_sk
+		summarizeBy: none
+		sourceColumn: campaign_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column raw_order_status
+		dataType: string
+		lineageTag: 798ce1e8-cf48-40ec-afaf-041d6a5a2ddf
+		sourceLineageTag: raw_order_status
+		summarizeBy: none
+		sourceColumn: raw_order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 07c7e96b-1d9d-4ba7-958f-230e30618dee
+		sourceLineageTag: order_status_sk
+		summarizeBy: none
+		sourceColumn: order_status_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column create_local_date_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bebfec8-3382-4514-b6d3-11d12ac9a3c3
+		sourceLineageTag: create_local_date_sk
+		summarizeBy: none
+		sourceColumn: create_local_date_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column create_time_utc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5be95e9a-f91f-4efd-b0e8-b994e534d39c
+		sourceLineageTag: create_time_utc
+		summarizeBy: none
+		sourceColumn: create_time_utc
+
+		annotation SummarizationSetBy = Automatic
+
+	column update_time_utc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3fc5b759-c8f1-4cc2-adc4-5983fc7ec906
+		sourceLineageTag: update_time_utc
+		summarizeBy: none
+		sourceColumn: update_time_utc
+
+		annotation SummarizationSetBy = Automatic
+
+	column create_hour_local
+		dataType: int64
+		formatString: 0
+		lineageTag: 45a2cb0a-cf33-4ca1-bfb1-0bdaac17a2d0
+		sourceLineageTag: create_hour_local
+		summarizeBy: none
+		sourceColumn: create_hour_local
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column create_minute_local
+		dataType: int64
+		formatString: 0
+		lineageTag: 901011ea-de9a-4909-b4ac-689274e6c311
+		sourceLineageTag: create_minute_local
+		summarizeBy: none
+		sourceColumn: create_minute_local
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column country
+		dataType: string
+		lineageTag: 5028209a-80e6-49a5-b15b-281a07f982aa
+		sourceLineageTag: country
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column buyer_id
+		dataType: string
+		lineageTag: 3bb05ecb-94d4-4d25-84e6-2ac3c5c253ef
+		sourceLineageTag: buyer_id
+		summarizeBy: none
+		sourceColumn: buyer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency
+		dataType: string
+		lineageTag: 0cfb3fbd-31aa-48bd-8816-78bb9149f3ce
+		sourceLineageTag: currency
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_sk
+		dataType: string
+		lineageTag: f9aef44b-7411-4e0a-b5f9-5607f61ba000
+		sourceLineageTag: product_sk
+		summarizeBy: none
+		sourceColumn: product_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: eebe494a-47f6-4c30-af1c-b6ffb6b49766
+		sourceLineageTag: product_name
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column variant_name
+		dataType: string
+		lineageTag: e708612a-cb49-44ec-b56e-8e3cc2af036f
+		sourceLineageTag: variant_name
+		summarizeBy: none
+		sourceColumn: variant_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id_platform
+		dataType: string
+		lineageTag: 701b6141-3dc8-4d43-9da2-f5c95d0ebfb1
+		sourceLineageTag: product_id_platform
+		summarizeBy: none
+		sourceColumn: product_id_platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id_seller
+		dataType: string
+		lineageTag: 0906d577-8a51-4edf-a81c-b191eed2d068
+		sourceLineageTag: product_id_seller
+		summarizeBy: none
+		sourceColumn: product_id_seller
+
+		annotation SummarizationSetBy = Automatic
+
+	column variant_id_platform
+		dataType: string
+		lineageTag: 0dc0730d-67cd-4c3f-b3eb-59add7c7e576
+		sourceLineageTag: variant_id_platform
+		summarizeBy: none
+		sourceColumn: variant_id_platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column variant_id_seller
+		dataType: string
+		lineageTag: 409237a1-3513-45a0-80c3-775e5c4d9473
+		sourceLineageTag: variant_id_seller
+		summarizeBy: none
+		sourceColumn: variant_id_seller
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: string
+		lineageTag: b558fcb2-58f2-4f92-891d-8fece580d48c
+		sourceLineageTag: order_id
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_item_id
+		dataType: string
+		lineageTag: b9012126-3a15-4c95-bc4a-766b15ced4bd
+		sourceLineageTag: order_item_id
+		summarizeBy: none
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform
+		dataType: string
+		lineageTag: a0c9b6a6-465c-40f2-9727-469de18cfcdb
+		sourceLineageTag: platform
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_type
+		dataType: string
+		lineageTag: 361deaf7-39b4-42c2-b6ca-cf3c7743519a
+		sourceLineageTag: promotion_type
+		summarizeBy: none
+		sourceColumn: promotion_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 997d41ef-b36f-478c-a996-1364ba9ae4f2
+		sourceLineageTag: quantity
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_price
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6a6d70f0-41c6-4b0a-ad84-92c90a80d99d
+		sourceLineageTag: unit_price
+		summarizeBy: sum
+		sourceColumn: unit_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column promotion_amount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 750a6008-717c-4574-8b07-6172b7f1025f
+		sourceLineageTag: promotion_amount
+		summarizeBy: sum
+		sourceColumn: promotion_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column voucher_amount_seller
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: a581fec0-4847-4973-89c5-86f8b1672487
+		sourceLineageTag: voucher_amount_seller
+		summarizeBy: sum
+		sourceColumn: voucher_amount_seller
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column _debug_lzd_voucher_seller
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d8dfc11e-cbc7-491c-ad7a-e11e4760c1cf
+		sourceLineageTag: _debug_lzd_voucher_seller
+		summarizeBy: sum
+		sourceColumn: _debug_lzd_voucher_seller
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column _debug_lzd_voucher_seller_lpi
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 3ed40c91-6aff-491e-8d25-1b891cf29fad
+		sourceLineageTag: _debug_lzd_voucher_seller_lpi
+		summarizeBy: sum
+		sourceColumn: _debug_lzd_voucher_seller_lpi
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column voucher_amount_platform
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 44801fd3-8d71-43b7-959e-8737b854473e
+		sourceLineageTag: voucher_amount_platform
+		summarizeBy: sum
+		sourceColumn: voucher_amount_platform
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column _debug_lzd_voucher_platform_lpi
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: c1f7b21e-abd4-4971-8a17-41f0187e34f0
+		sourceLineageTag: _debug_lzd_voucher_platform_lpi
+		summarizeBy: sum
+		sourceColumn: _debug_lzd_voucher_platform_lpi
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column payment_method
+		dataType: string
+		lineageTag: b7c457bd-771a-4915-a5f7-1144545ea761
+		sourceLineageTag: payment_method
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column th_geography_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f6b8c41-8753-46bf-a102-f55fc9ae5ce9
+		sourceLineageTag: th_geography_sk
+		summarizeBy: none
+		sourceColumn: th_geography_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column _shop_id
+		dataType: string
+		lineageTag: d8aa0b97-d695-4afd-a0a5-d4f1c8bc8faa
+		sourceLineageTag: _shop_id
+		summarizeBy: none
+		sourceColumn: _shop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_order_item = entity
+		mode: directLake
+		source
+			entityName: fact_order_item
+			schemaName: dbo
+			expressionSource: 'DirectLake - PlatformLakehouse'
+

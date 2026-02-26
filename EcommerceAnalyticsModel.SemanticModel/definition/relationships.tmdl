@@ -1,0 +1,20 @@
+relationship ff53c224-8244-ea85-ceb3-354dae4945f3
+	fromColumn: fact_order_item.campaign_sk
+	toColumn: dim_campaign.campaign_sk
+
+relationship 1efc4722-bf12-0bf6-7924-af3a733e5f5c
+	fromColumn: fact_order_item.create_local_date_sk
+	toColumn: dim_date.date_sk
+
+relationship 01fe1f99-5d71-f0f5-e86a-11b9657bcbe6
+	fromColumn: fact_order_item.order_status_sk
+	toColumn: dim_order_status.order_status_sk
+
+relationship d5c1c551-7ad2-9a57-6990-acc361bed41b
+	fromColumn: fact_order_item.product_sk
+	toColumn: dim_product.product_sk
+
+relationship 905ff2ca-b83a-ccba-99ad-9a5959d1b058
+	fromColumn: fact_order_item.th_geography_sk
+	toColumn: dim_th_geography.th_geography_sk
+

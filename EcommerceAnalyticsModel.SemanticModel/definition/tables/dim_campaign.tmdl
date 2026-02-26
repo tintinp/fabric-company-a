@@ -1,0 +1,80 @@
+table dim_campaign
+	lineageTag: e9e99439-3f26-4eef-8588-1cf667125254
+	sourceLineageTag: [dbo].[dim_campaign]
+
+	column campaign_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: d4bc25fd-28c4-42c2-8d71-72210e0f6bdb
+		sourceLineageTag: campaign_sk
+		summarizeBy: none
+		sourceColumn: campaign_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column date_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 43479871-2679-470e-902a-018323ca8150
+		sourceLineageTag: date_sk
+		summarizeBy: none
+		sourceColumn: date_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column campaign_1
+		dataType: string
+		lineageTag: f1922d7b-e813-46ba-bf43-5db39b81e561
+		sourceLineageTag: campaign_1
+		summarizeBy: none
+		sourceColumn: campaign_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_2
+		dataType: string
+		lineageTag: f06b2653-b9f2-4559-be1c-d66dabd4da42
+		sourceLineageTag: campaign_2
+		summarizeBy: none
+		sourceColumn: campaign_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_3
+		dataType: string
+		lineageTag: 4d6a417e-2353-430f-9d2c-7ba8c5d5e4ca
+		sourceLineageTag: campaign_3
+		summarizeBy: none
+		sourceColumn: campaign_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_4
+		dataType: string
+		lineageTag: c9888bc4-bdfb-45d3-81e8-43069b4272aa
+		sourceLineageTag: campaign_4
+		summarizeBy: none
+		sourceColumn: campaign_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_5
+		dataType: string
+		lineageTag: 19d21cc6-d077-4a06-8dab-a6e12acfdc5c
+		sourceLineageTag: campaign_5
+		summarizeBy: none
+		sourceColumn: campaign_5
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_campaign = entity
+		mode: directLake
+		source
+			entityName: dim_campaign
+			schemaName: dbo
+			expressionSource: 'DirectLake - PlatformLakehouse'
+

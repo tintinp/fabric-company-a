@@ -1,0 +1,33 @@
+table _Measures
+	lineageTag: 9315798a-32d8-497f-9974-f33ecf4df977
+
+	measure GMV1_unitprice = ```
+			SUMX(
+			    'fact_order_item', 
+			    'fact_order_item'[unit_price] * 'fact_order_item'[quantity]
+			)
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f367a726-27a0-447f-aafb-172f3a29cce7
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Placeholder
+		lineageTag: d30d75f5-e36b-4d0e-a871-36f87be666e4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "Placeholder", STRING,
+				    { { "DeleteMe" } }
+				)
+
+	annotation PBI_Id = 0e5aa36fd6464b75a0e460ddc78ca053
+

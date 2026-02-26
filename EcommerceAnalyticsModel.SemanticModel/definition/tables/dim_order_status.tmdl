@@ -1,0 +1,32 @@
+table dim_order_status
+	lineageTag: caf3d7fe-625e-4752-be48-cbda3a2bb830
+	sourceLineageTag: [dbo].[dim_order_status]
+
+	column order_status_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: e2e839ac-8403-473f-af49-2515afa43a43
+		sourceLineageTag: order_status_sk
+		summarizeBy: none
+		sourceColumn: order_status_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column order_status_code
+		dataType: string
+		lineageTag: d22d5492-50b6-4c8a-9d77-e236f34f8b53
+		sourceLineageTag: order_status_code
+		summarizeBy: none
+		sourceColumn: order_status_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_order_status = entity
+		mode: directLake
+		source
+			entityName: dim_order_status
+			schemaName: dbo
+			expressionSource: 'DirectLake - PlatformLakehouse'
+

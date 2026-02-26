@@ -1,0 +1,164 @@
+table dim_product
+	lineageTag: f6039667-d993-4f10-afc1-4f59f0d9ed12
+	sourceLineageTag: [dbo].[dim_product]
+
+	column product_sk
+		dataType: string
+		lineageTag: 67871d19-6e91-43b1-95ee-f4bb9995042f
+		sourceLineageTag: product_sk
+		summarizeBy: none
+		sourceColumn: product_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku_seller
+		dataType: string
+		lineageTag: b7e750ce-8761-4863-8b32-41b726fe4cd0
+		sourceLineageTag: sku_seller
+		summarizeBy: none
+		sourceColumn: sku_seller
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name_1
+		dataType: string
+		lineageTag: dd05653e-eed3-48a1-a7c6-817b907d2769
+		sourceLineageTag: product_name_1
+		summarizeBy: none
+		sourceColumn: product_name_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name_2
+		dataType: string
+		lineageTag: e70b08f5-17e0-470c-a829-ff9d64281d94
+		sourceLineageTag: product_name_2
+		summarizeBy: none
+		sourceColumn: product_name_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column tag
+		dataType: string
+		lineageTag: 7e681e15-2ee4-4729-880a-1d3399f120b9
+		sourceLineageTag: tag
+		summarizeBy: none
+		sourceColumn: tag
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_1
+		dataType: string
+		lineageTag: 7cb99384-738a-4024-9285-02c251ca29e0
+		sourceLineageTag: category_1
+		summarizeBy: none
+		sourceColumn: category_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_2
+		dataType: string
+		lineageTag: e1e2bf5c-19a7-432b-b4da-79ebcbe2363c
+		sourceLineageTag: category_2
+		summarizeBy: none
+		sourceColumn: category_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_3
+		dataType: string
+		lineageTag: f0c6ee81-5fd1-40e8-974a-145ac2f02dc0
+		sourceLineageTag: category_3
+		summarizeBy: none
+		sourceColumn: category_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_4
+		dataType: string
+		lineageTag: 04a70ccd-f202-4945-8e5b-dde39702b5b7
+		sourceLineageTag: category_4
+		summarizeBy: none
+		sourceColumn: category_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_5
+		dataType: string
+		lineageTag: 9402f3d7-62f8-4536-8bb9-0c48c22d083b
+		sourceLineageTag: category_5
+		summarizeBy: none
+		sourceColumn: category_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id_lzd
+		dataType: string
+		lineageTag: 69e7a0dc-15d9-4588-bbac-eb69dfe4a83a
+		sourceLineageTag: product_id_lzd
+		summarizeBy: none
+		sourceColumn: product_id_lzd
+
+		annotation SummarizationSetBy = Automatic
+
+	column variant_id_lzd
+		dataType: string
+		lineageTag: 4288aa48-208e-4c40-bccf-9186e3a9fd76
+		sourceLineageTag: variant_id_lzd
+		summarizeBy: none
+		sourceColumn: variant_id_lzd
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id_shp
+		dataType: string
+		lineageTag: b9735285-87db-45aa-9959-3502d4dedf06
+		sourceLineageTag: product_id_shp
+		summarizeBy: none
+		sourceColumn: product_id_shp
+
+		annotation SummarizationSetBy = Automatic
+
+	column variant_id_shp
+		dataType: string
+		lineageTag: b49d91b4-3f99-4bb4-909a-ef76df714b96
+		sourceLineageTag: variant_id_shp
+		summarizeBy: none
+		sourceColumn: variant_id_shp
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id_ttk
+		dataType: string
+		lineageTag: eaeb83f0-1489-4fed-a9db-ad9ae80cb1de
+		sourceLineageTag: product_id_ttk
+		summarizeBy: none
+		sourceColumn: product_id_ttk
+
+		annotation SummarizationSetBy = Automatic
+
+	column variant_id_ttk
+		dataType: string
+		lineageTag: ff8d41a9-4767-4c88-95e1-7a58ef3e0389
+		sourceLineageTag: variant_id_ttk
+		summarizeBy: none
+		sourceColumn: variant_id_ttk
+
+		annotation SummarizationSetBy = Automatic
+
+	column shop_id
+		dataType: string
+		lineageTag: fc48b386-6efa-4151-8d92-80ee8a08bcb7
+		sourceLineageTag: shop_id
+		summarizeBy: none
+		sourceColumn: shop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_product = entity
+		mode: directLake
+		source
+			entityName: dim_product
+			schemaName: dbo
+			expressionSource: 'DirectLake - PlatformLakehouse'
+

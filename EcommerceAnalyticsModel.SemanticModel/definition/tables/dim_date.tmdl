@@ -1,0 +1,178 @@
+table dim_date
+	lineageTag: 5dccf961-8fa3-4163-b978-9e43ba53e95c
+	sourceLineageTag: [dbo].[dim_date]
+
+	column date_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: dad68d9b-903b-42fe-9957-663c34c88cd0
+		sourceLineageTag: date_sk
+		summarizeBy: none
+		sourceColumn: date_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column full_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 77d4b9d8-83d8-4920-b278-b0ba48b0e2a8
+		sourceLineageTag: full_date
+		summarizeBy: none
+		sourceColumn: full_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 89d7dca1-a645-483c-98d4-b6131dd4e05f
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c3f33e2-d16b-4544-996f-f5cfc267406c
+		sourceLineageTag: quarter
+		summarizeBy: none
+		sourceColumn: quarter
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f2cfb24-2efc-4eb7-b512-d5f072c9887b
+		sourceLineageTag: month
+		summarizeBy: none
+		sourceColumn: month
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column day
+		dataType: int64
+		formatString: 0
+		lineageTag: 11451adc-98aa-4a47-acd1-fe981b2f4239
+		sourceLineageTag: day
+		summarizeBy: none
+		sourceColumn: day
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column day_of_week
+		dataType: int64
+		formatString: 0
+		lineageTag: f50a51d0-5477-4300-986b-bb361c2e2023
+		sourceLineageTag: day_of_week
+		summarizeBy: none
+		sourceColumn: day_of_week
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column day_of_year
+		dataType: int64
+		formatString: 0
+		lineageTag: cf2b1948-62a2-4b5a-b2d2-abced37ba107
+		sourceLineageTag: day_of_year
+		summarizeBy: none
+		sourceColumn: day_of_year
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column week_of_year
+		dataType: int64
+		formatString: 0
+		lineageTag: b7a71fdc-f9fd-48bb-8726-2a84fa16787b
+		sourceLineageTag: week_of_year
+		summarizeBy: none
+		sourceColumn: week_of_year
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column month_name
+		dataType: string
+		lineageTag: 6bab9835-1632-4a04-8160-d54c808f96b0
+		sourceLineageTag: month_name
+		summarizeBy: none
+		sourceColumn: month_name
+		sortByColumn: month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name
+		dataType: string
+		lineageTag: 2090f974-a144-4c78-a3d3-1f9cf76da86e
+		sourceLineageTag: day_name
+		summarizeBy: none
+		sourceColumn: day_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 25e7cf16-a792-42d7-b994-7ac9d9454333
+		sourceLineageTag: is_weekend
+		summarizeBy: none
+		sourceColumn: is_weekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekday
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 518ef1b7-49d0-432e-a047-2556e491184c
+		sourceLineageTag: is_weekday
+		summarizeBy: none
+		sourceColumn: is_weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_first_day_of_month
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9a61224d-235a-45e2-97a1-e69b53d573b9
+		sourceLineageTag: is_first_day_of_month
+		summarizeBy: none
+		sourceColumn: is_first_day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_last_day_of_month
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 91d59103-2c46-4245-83fe-25dbfb1347e2
+		sourceLineageTag: is_last_day_of_month
+		summarizeBy: none
+		sourceColumn: is_last_day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = entity
+		mode: directLake
+		source
+			entityName: dim_date
+			schemaName: dbo
+			expressionSource: 'DirectLake - PlatformLakehouse'
+

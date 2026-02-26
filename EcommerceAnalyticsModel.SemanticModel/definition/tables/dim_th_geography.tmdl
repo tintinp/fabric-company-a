@@ -1,0 +1,86 @@
+table dim_th_geography
+	lineageTag: f0c8b44a-86df-48ff-ab85-6d6045f238d8
+	sourceLineageTag: [dbo].[dim_th_geography]
+
+	column th_geography_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 690812e7-61db-4ea0-88d0-87564e643aac
+		sourceLineageTag: th_geography_sk
+		summarizeBy: none
+		sourceColumn: th_geography_sk
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column postal_code
+		dataType: string
+		lineageTag: 9457b367-c92d-44f9-9d5d-c2a2a7648582
+		sourceLineageTag: postal_code
+		summarizeBy: none
+		sourceColumn: postal_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column province_en
+		dataType: string
+		lineageTag: 84155937-efb4-4e69-bb00-7075db4a6d84
+		sourceLineageTag: province_en
+		summarizeBy: none
+		sourceColumn: province_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column province_th
+		dataType: string
+		lineageTag: 03aa4754-09bb-4fa4-b65d-db440025aa5a
+		sourceLineageTag: province_th
+		summarizeBy: none
+		sourceColumn: province_th
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_en
+		dataType: string
+		lineageTag: 4daa8def-bfd8-4ac6-b2cd-68189aa95328
+		sourceLineageTag: district_en
+		summarizeBy: none
+		sourceColumn: district_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_th
+		dataType: string
+		lineageTag: 4c15b7f7-82a0-40df-8f1e-4d75f6e719ff
+		sourceLineageTag: district_th
+		summarizeBy: none
+		sourceColumn: district_th
+
+		annotation SummarizationSetBy = Automatic
+
+	column subdistrict_en
+		dataType: string
+		lineageTag: 692ec673-45a0-4681-9d46-06148ee50986
+		sourceLineageTag: subdistrict_en
+		summarizeBy: none
+		sourceColumn: subdistrict_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column subdistrict_th
+		dataType: string
+		lineageTag: 60009fa1-267e-425b-8f8f-d05567c851f5
+		sourceLineageTag: subdistrict_th
+		summarizeBy: none
+		sourceColumn: subdistrict_th
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_th_geography = entity
+		mode: directLake
+		source
+			entityName: dim_th_geography
+			schemaName: dbo
+			expressionSource: 'DirectLake - PlatformLakehouse'
+
